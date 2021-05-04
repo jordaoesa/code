@@ -1,5 +1,5 @@
-function solution(root, k) {
-	if(!root.left && !root.right) return root;
+function solution(root) {
+    if(!root || (!root.left && !root.right)) return root;
     
     let temp = root.right;
     root.right = root.left;
@@ -22,7 +22,7 @@ let root = new Node(8, left, right);
 
 console.log(root)
 
-console.log(solution(root, 5));
+console.log(solution(root));
 
 function Node(val, left, right) {
     this.val = (val===undefined ? 0 : val);
